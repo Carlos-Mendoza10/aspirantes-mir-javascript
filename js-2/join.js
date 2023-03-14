@@ -2,14 +2,16 @@ function join(array){
     let respuesta = ""
     for (let i = 0; i < array.length ; i ++){
         let elemento = array[i]
-        respuesta = respuesta + elemento.toString() + " "
+        if (i === array.length-1){
+            respuesta = respuesta + elemento.toString()
+        } else{
+            respuesta = respuesta + elemento.toString() + " "
+        }
+        // con el if se comporta igual que el metodo join ya que si cambiamos el espacio en blanco
+        // por "--" o cualquier otro simbolo se va ha separar bien.
     }
-    let respuestafinal = respuesta.substring(0,respuesta.length-1) 
-    // esta linea de codigo la puse por si se quiere cambiar el espacio en blanco por un "-" la respuesta
-    // aparesca asi carlos-pedro-juan-carolina y no salga asi carlos-pedro-juan-carolina-
-    // donde sale un guion al final. Asi funcionando igual que el método join.
     
-    return respuestafinal
+    return respuesta
 }
 
 console.log(join(["carlos","pedro","juan","carolina"]))// carlos pedro juan carolina
