@@ -19,11 +19,14 @@ function ejercicio1(objeto){
             console.log(`${llave}:${objeto[llave]}`)
         }
     }
-}
-// punto 6
-function saluda(objeto){
-   console.log("Hola, me llamo " + objeto.nombre)
+    // punto 6
+    pedro.saluda = function(){
+        console.log("Hola, me llamo " + objeto.nombre)
+       }
 }
 
+
+
 ejercicio1(pedro)
-saluda(pedro)
+pedro.saluda()
+
